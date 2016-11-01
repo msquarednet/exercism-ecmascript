@@ -27,41 +27,46 @@
  * See its tests in this folder for a quick primer on how to use it! ( :
  */
 
-import Grains from './grains';
+'use strict';
 
-describe('Grains', () => {
-  const grains = new Grains();
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-  it('square 1', () => {
+var _grains = require('./grains');
+
+var _grains2 = _interopRequireDefault(_grains);
+
+describe('Grains', function () {
+  var grains = new _grains2['default']();
+
+  it('square 1', function () {
     expect(grains.square(1)).toBe('1');
   });
 
-  it('square 2', () => {
+  it('square 2', function () {
     expect(grains.square(2)).toBe('2');
   });
 
-  it('square 3', () => {
+  it('square 3', function () {
     expect(grains.square(3)).toBe('4');
   });
 
-  it('square 4', () => {
+  it('square 4', function () {
     expect(grains.square(4)).toBe('8');
   });
 
-  it('square 16', () => {
+  it('square 16', function () {
     expect(grains.square(16)).toBe('32768');
   });
 
-  it('square 32', () => {
+  it('square 32', function () {
     expect(grains.square(32)).toBe('2147483648');
   });
 
-  it('square 64', () => {
+  it('square 64', function () {
     expect(grains.square(64)).toBe('9223372036854775808');
   });
 
-  it('total', () => {
+  it('total', function () {
     expect(grains.total()).toBe('18446744073709551615');
   });
-
 });
